@@ -5,9 +5,7 @@ public class Methods2 {
         System.out.println(yeniMesaj);
         int sayi= topla(5,7);
         System.out.println(sayi);
-
-
-
+        int toplam =topla2(2,3,4,5);
 
     }
 
@@ -32,6 +30,15 @@ public class Methods2 {
 
     public static String sehirVer(){
         return "Ankara";
+    }
+
+    public static int topla2(int ... sayilar) {
+        int toplam=0;
+        for (int sayi:sayilar){
+            toplam+=sayi;
+        }
+        return toplam;
+
     }
 
 
