@@ -1,6 +1,19 @@
 package classeswithattributes;
 
 public class Product {
+    public Product(int id, String name, String descriptions, double price, int stockAmount, String renk ){
+        System.out.println("Yapici blok calisti");
+        this.id=id;
+        this.renk= renk;
+        this.name= name;
+        this.price=price;
+        this.descriptions= descriptions;
+        this.stockAmount=stockAmount;
+    }
+
+    public Product(){
+
+    }
 
     //attribute | field
     private int id;
