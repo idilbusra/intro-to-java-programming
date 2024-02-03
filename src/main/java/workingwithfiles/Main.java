@@ -2,11 +2,14 @@ package workingwithfiles;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        readFile();
+        writeFile();
         readFile();
     }
     public static void createFile(){
@@ -42,6 +45,17 @@ public class Main {
             }
             reader.close();
         } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void writeFile(){
+        try {
+            FileWriter writer= new FileWriter("C:\\Users\\idil_\\IdeaProjects\\javademos\\src\\main\\java\\files\\students.txt", true); //BufferedWriter
+            writer.write("Ahmet");
+            System.out.println("Dosyaya yazildi");
+            writer.close();
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
